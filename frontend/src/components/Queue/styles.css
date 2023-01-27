@@ -1,0 +1,40 @@
+.queue-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 4rem;
+    font-size: 1.5rem;
+}
+
+.label {
+    margin-right: 1rem;
+}
+
+.queue-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    width: 2em;
+    height: 2em;
+    border: 1px solid black;
+    background-color: #b8c1ec;
+    color: #232946;
+    opacity: 70%;
+}
+
+.queue-item:first-of-type {
+    opacity: 100%;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.no-queue {
+    font-style: italic;
+}

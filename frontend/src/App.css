@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  background-color: #232946;
+  color: #fffffe;
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.actions-label {
+  font-size: 1.5rem;
+  text-align: justify;
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.actions{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
