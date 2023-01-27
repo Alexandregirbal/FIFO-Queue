@@ -1,13 +1,7 @@
 import { baseUrl, defaultHeaders } from "./configs";
 
 export const getActions = async () => {
-    const response = await fetch(
-        `${baseUrl}/actions`,
-        {
-            method: "GET", 
-            headers: defaultHeaders,
-        }
-    );
+    const response = await fetch(`${baseUrl}/actions`);
     return response.json();
 }
 
