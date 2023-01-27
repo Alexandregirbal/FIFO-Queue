@@ -3,13 +3,13 @@ import QueueProps from "./props";
 import "./styles.css";
 
 
-export const ActionButton: React.FC<QueueProps> = ({ queue }) => {
+export const Queue: React.FC<QueueProps> = ({ queue }) => {
   return (
     <div className="queue-container">
         <span className="label">Queue:</span>
         {queue.map(
-            action => 
-            <div className="queue-item">{action}</div>
+            (action, index) => 
+            <div className="queue-item" key={index}>{action}</div>
         )}
         {queue.length === 0 || !queue 
             ? <div className="no-queue">Aucune action dans la queue</div> 
@@ -19,4 +19,4 @@ export const ActionButton: React.FC<QueueProps> = ({ queue }) => {
   );
 };
 
-export default ActionButton;
+export default Queue;

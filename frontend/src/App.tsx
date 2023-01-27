@@ -1,7 +1,7 @@
+import './App.css';
 import { useEffect, useState } from 'react';
 import { addActionToQueue, getActions } from './api/actions';
 import { getQueue } from './api/queue';
-import './App.css';
 import ActionButton from './components/ActionButton';
 import Queue from './components/Queue';
 
