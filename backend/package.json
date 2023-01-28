@@ -1,5 +1,5 @@
 {
-  "name": "waapi-technical-test-backend",
+  "name": "fifo-queue-backend",
   "version": "0.0.1",
   "engines": {
     "node": ">=14.0.0"
