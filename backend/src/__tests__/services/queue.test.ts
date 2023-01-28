@@ -44,15 +44,14 @@ describe("shiftActionFromQueue", () => {
     expect(shiftedAction).toBeUndefined()
   })
 
-  test("shiftActionFromQueue returns undefined when queue is empty", () => {
-    const { shiftActionFromQueue } = require("../../Services/queue");
+  test("shiftActionFromQueue returns element", () => {
+    const { shiftActionFromQueue, addActionToQueue } = require("../../Services/queue");
+    const action = "A"
+    const queue = addActionToQueue(action)
+    expect(action).toBe(queue[0])
+
     const shiftedAction = shiftActionFromQueue()
-    expect(shiftedAction).toBeUndefined()
+    expect(shiftedAction).toBe(action)
   })
 
-  test("shiftActionFromQueue returns undefined when queue is empty", () => {
-    const { shiftActionFromQueue } = require("../../Services/queue");
-    const shiftedAction = shiftActionFromQueue()
-    expect(shiftedAction).toBeUndefined()
-  })
 })
