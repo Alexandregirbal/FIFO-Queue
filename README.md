@@ -9,6 +9,10 @@ It does not use any database, it is using a simple array to store the queue.
 - Have port **3000** available
 - Have port **5000** available
 
+## Parameters
+
+Go to the **backend** folder and edit the **[constants.ts](./backend/src/constants.ts)** file to change the parameters. It is now setup to have a cooldown of 24 hours, and a execution interval of 2 minutes. The actions and max credits are also editable, as well as the max and min credit percentages.
+
 ## Start
 
 To start the project run the following command (it will install all the dependencies and start the backend & frontend servers):
