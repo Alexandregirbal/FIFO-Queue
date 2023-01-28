@@ -12,20 +12,27 @@ const afterCooldown = () => {
     console.log("Executor started back.");
 }
 
-export const startCooldown = () => {
-    setTimeout(afterCooldown, COOLDOWN)
+export const startCooldown = (
+    cooldown: number = COOLDOWN,
+    callback: () => void = afterCooldown,
+): NodeJS.Timeout => {
+    const timeoutObject = setTimeout(callback, cooldown)
     console.log("Cooldown started.");
+    return timeoutObject
 }
 
-export const updateLastExecutedActionDatetime = () => {
+export const updateLastExecutedActionDatetime = (): Date => {
     lastExecutedActionDatetime = new Date()
+    return lastExecutedActionDatetime
 }
 
-export const isCooldownOver = () => {
+export const isCooldownOver = (
+    cooldown: number = COOLDOWN
+): boolean => {
     if (!lastExecutedActionDatetime) {
-        return false
+        return false // because it never began
     }
     const now = new Date()
-    const cooldownOver = now.getTime() - lastExecutedActionDatetime.getTime() > COOLDOWN
+    const cooldownOver = now.getTime() - lastExecutedActionDatetime.getTime() > cooldown
     return cooldownOver
 }
