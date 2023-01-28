@@ -1,6 +1,6 @@
 # FIFO Queue
 
-This is a full stack simple project. It is handling a FIFO queue with an React UI and a Node/Express backend.
+This is a full stack simple project. It is handling a FIFO queue with a React UI and a Node/Express backend.
 It does not use any database, it is using a simple array to store the queue.
 
 ## Requirements
