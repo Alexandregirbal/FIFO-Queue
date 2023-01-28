@@ -1,16 +1,7 @@
-import { resetCurrentActions } from "../action";
-import { COOLDOWN } from "../../constants"
-import { startExecutor } from "../../Executor";
+import { COOLDOWN } from "../../constants";
+import { afterCooldown } from "./utils";
 
 let lastExecutedActionDatetime: Date | undefined = undefined
-
-const afterCooldown = () => {
-    console.log("Cooldown is done.");
-    resetCurrentActions()
-    console.log("Actions are reset.");
-    startExecutor()
-    console.log("Executor started back.");
-}
 
 export const startCooldown = (
     cooldown: number = COOLDOWN,
