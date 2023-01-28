@@ -1,6 +1,6 @@
 import { resetCurrentActions } from "../action";
 import { COOLDOWN } from "../../constants"
-import { startExecutor } from "../executor";
+import { startExecutor } from "../../Executor";
 
 let lastExecutedActionDatetime: Date | undefined = undefined
 

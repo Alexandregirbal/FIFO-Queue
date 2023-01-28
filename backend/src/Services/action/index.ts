@@ -49,3 +49,7 @@ export const decrementCredits = (actionType: string): void => {
     }
     action.credits--
 }
+
+export const actionIsInCurrentActions = (actionType: string): boolean => {
+    return !!currentActions?.find(action => action.type === actionType)
+}
