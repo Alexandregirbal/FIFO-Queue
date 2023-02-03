@@ -18,4 +18,12 @@ export const ACTIONS: Action[] = [
         type: "C",
         credits: 30,
     },
+    {
+        type: "D",
+        credits: 10,
+    },
+    {
+        type: "E",
+        credits: 1,
+    },
 ]
